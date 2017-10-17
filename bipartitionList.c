@@ -3009,7 +3009,7 @@ void plausibilityChecker(tree *tr, analdef *adef)
   for(i = 0; i < tr->numberOfTrees;  i++)
     {      
       int
-	numberOfSplits = readMultifurcatingTree(treeFile, smallTree, adef, TRUE);
+	numberOfSplits = readMultifurcatingTree(treeFile, smallTree, adef, FALSE); //LR set to false
       
       if(numberOfSplits > 0)
 	{
