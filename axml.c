@@ -3688,7 +3688,7 @@ static void allocNodex (tree *tr)
 #endif
 
 
-static void initAdef(analdef *adef)
+void initAdef(analdef *adef)
 {  
   adef->useSecondaryStructure  = FALSE;
   adef->bootstrapBranchLengths = FALSE;
@@ -11135,7 +11135,7 @@ static int sortLex(const void *a, const void *b)
 }
 
 
-static void extractTaxaFromTopology(tree *tr, rawdata *rdta, cruncheddata *cdta, char fileName[1024])
+void extractTaxaFromTopology(tree *tr, rawdata *rdta, cruncheddata *cdta, char fileName[1024])
 {
   FILE 
     *f = myfopen(fileName, "rb");

@@ -1391,7 +1391,8 @@ extern void categorizeGeneric (tree *tr, nodeptr p);
 extern double makenewzPartitionGeneric(tree *tr, nodeptr p, nodeptr q, double z0, int maxiter, int model);
 extern boolean isTip(int number, int maxTips);
 extern void computeTraversalInfo(tree *tr, nodeptr p, traversalInfo *ti, int *counter, int maxTips, int numBranches);
-
+extern void extractTaxaFromTopology(tree *tr, rawdata *rdta, cruncheddata *cdta, char fileName[1024]);
+extern void initAdef(analdef *adef);
 
 
 extern void   newviewIterative(tree *);
