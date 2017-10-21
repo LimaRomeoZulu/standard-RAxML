@@ -1507,6 +1507,8 @@ extern void *rax_malloc( size_t size );
 extern void *rax_realloc(void *p, size_t size, boolean needsMemoryAlignment);
 extern void rax_free(void *p);
 extern void *rax_calloc(size_t n, size_t size);
+extern void getinput(analdef *adef, rawdata *rdta, cruncheddata *cdta, tree *tr);
+extern void checkOutgroups(tree *tr, analdef *adef);
 
 #ifdef _WAYNE_MPI
 
