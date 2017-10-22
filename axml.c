@@ -849,7 +849,7 @@ static void getyspace (rawdata *rdta)
 }
 
 
-static unsigned int KISS32(void)
+unsigned int KISS32(void)
 {
   static unsigned int 
     x = 123456789, 

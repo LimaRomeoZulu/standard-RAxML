@@ -1509,6 +1509,15 @@ extern void rax_free(void *p);
 extern void *rax_calloc(size_t n, size_t size);
 extern void getinput(analdef *adef, rawdata *rdta, cruncheddata *cdta, tree *tr);
 extern void checkOutgroups(tree *tr, analdef *adef);
+extern unsigned int KISS32(void);
+extern int treeGetCh (FILE *fp);
+extern boolean  treeGetLabel (FILE *fp, char *lblPtr, int maxlen, boolean taxonLabel);
+extern int treeFlushLen (FILE  *fp, tree *tr);
+extern boolean treeNeedCh (FILE *fp, int c1, char *where);
+extern boolean treeProcessLength (FILE *fp, double *dptr, int *branchLabel, boolean storeBranchLabels, tree *tr);
+extern boolean  treeFlushLabel (FILE *fp);
+extern stringHashtable *initStringHashTable(hashNumberType n);
+
 
 #ifdef _WAYNE_MPI
 

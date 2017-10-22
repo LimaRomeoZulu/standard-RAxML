@@ -717,7 +717,7 @@ static int treeFinishCom (FILE *fp, char **strp)
 } /* treeFinishCom */
 
 
-static int treeGetCh (FILE *fp)         /* get next nonblank, noncomment character */
+int treeGetCh (FILE *fp)         /* get next nonblank, noncomment character */
 { /* treeGetCh */
   int  ch;
 
@@ -757,7 +757,7 @@ static boolean treeLabelEnd (int ch)
 
 static int treeEchoContext (FILE *fp1, FILE *fp2, int n);
 
-static boolean  treeGetLabel (FILE *fp, char *lblPtr, int maxlen, boolean taxonLabel)
+boolean  treeGetLabel (FILE *fp, char *lblPtr, int maxlen, boolean taxonLabel)
 {
   int      ch;
   boolean  done, quoted, lblfound;
@@ -817,7 +817,7 @@ static boolean  treeGetLabel (FILE *fp, char *lblPtr, int maxlen, boolean taxonL
 }
 
 
-static boolean  treeFlushLabel (FILE *fp)
+boolean  treeFlushLabel (FILE *fp)
 { 
   return  treeGetLabel(fp, (char *) NULL, (int) 0, FALSE);
 } 
@@ -930,10 +930,10 @@ static int treeEchoContext (FILE *fp1, FILE *fp2, int n)
 	}*/
 } /* treeEchoContext */
 
-static boolean treeNeedCh (FILE *fp, int c1, char *where);
+boolean treeNeedCh (FILE *fp, int c1, char *where);
 
 
-static boolean treeProcessLength (FILE *fp, double *dptr, int *branchLabel, boolean storeBranchLabels, tree *tr)
+boolean treeProcessLength (FILE *fp, double *dptr, int *branchLabel, boolean storeBranchLabels, tree *tr)
 {
   int
     ch;
@@ -980,7 +980,7 @@ static boolean treeProcessLength (FILE *fp, double *dptr, int *branchLabel, bool
 }
 
 
-static int treeFlushLen (FILE  *fp, tree *tr)
+int treeFlushLen (FILE  *fp, tree *tr)
 {
   double  
     dummy;  
@@ -1010,7 +1010,7 @@ static int treeFlushLen (FILE  *fp, tree *tr)
 
 
 
-static boolean treeNeedCh (FILE *fp, int c1, char *where)
+boolean treeNeedCh (FILE *fp, int c1, char *where)
 {
   int  
     c2;
