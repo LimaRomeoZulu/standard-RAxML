@@ -531,6 +531,7 @@ typedef  struct noderec
   int              support;
   int              number;
   char             x;
+  boolean	   isLeaf;
 }
   node, *nodeptr;
 
