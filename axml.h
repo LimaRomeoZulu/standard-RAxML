@@ -531,6 +531,7 @@ typedef  struct noderec
   int              support;
   int              number;
   char             x;
+  float            rec_distrs
 }
   node, *nodeptr;
 
@@ -815,7 +816,10 @@ typedef  struct  {
   
   int *ti; 
   
-  int numberOfTrees; 
+  //Information about geneTrees
+  int 				numberOfTrees; 
+  int 				*geneLeafDistributions;
+  float 			*geneRFDistances;
 
   stringHashtable  *nameHash;
 
