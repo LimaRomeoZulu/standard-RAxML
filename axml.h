@@ -531,11 +531,7 @@ typedef  struct noderec
   int              support;
   int              number;
   char             x;
-<<<<<<< HEAD
   float            rec_distrs
-=======
-  boolean	   isLeaf;
->>>>>>> b4c8789771b79dad2c890f36d9a17684f81af9ee
 }
   node, *nodeptr;
 

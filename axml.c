@@ -849,7 +849,7 @@ static void getyspace (rawdata *rdta)
 }
 
 
-static unsigned int KISS32(void)
+unsigned int KISS32(void)
 {
   static unsigned int 
     x = 123456789, 
@@ -1807,7 +1807,7 @@ static void inputweights (rawdata *rdta)
 
 
 
-static void getinput(analdef *adef, rawdata *rdta, cruncheddata *cdta, tree *tr)
+void getinput(analdef *adef, rawdata *rdta, cruncheddata *cdta, tree *tr)
 {
   int i;
 
@@ -4735,7 +4735,7 @@ static int modelExists(char *model, analdef *adef)
 
 
 
-static void checkOutgroups(tree *tr, analdef *adef)
+void checkOutgroups(tree *tr, analdef *adef)
 {
   if(adef->outgroup)
     {
