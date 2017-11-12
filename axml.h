@@ -1518,7 +1518,15 @@ extern boolean treeNeedCh (FILE *fp, int c1, char *where);
 extern boolean treeProcessLength (FILE *fp, double *dptr, int *branchLabel, boolean storeBranchLabels, tree *tr);
 extern boolean  treeFlushLabel (FILE *fp);
 extern stringHashtable *initStringHashTable(hashNumberType n);
-
+extern void preOrderTraversal(nodeptr p, int numsp, int start, int* array, int* backarray, int* pos);
+extern void unrootedEulerTour(nodeptr p, int numsp, int* array, int* reference, int* pos, int* taxonToEulerIndex);
+extern void relabelInnerNodes(nodeptr p, tree *tr, int *number, int *nodeCounter);
+extern void rec_extractTaxa(int* smallTreeTaxa, int* taxonToReduction, nodeptr p, int numsp, int* pos, int* pos2);
+extern void rec_preOrderTraversalMulti(nodeptr p, int numsp, int start, int* backarray, int* deg, int* pos);
+extern unsigned int **rec_initBitVector(tree *tr, unsigned int vectorLength);
+extern void rec_extractBipartitionsMulti(unsigned int** bitvectors, int* seq, int arraysize, int numsp, unsigned int vLength, int ntips, int first, hashtable* hash, int* taxonToReduction, int* taxonHasDegree, int maxSplits);
+extern int rec_findBipartitions(unsigned int ** bitvectors, int* seq, int arraysize, int* translate, int numsp, unsigned int vLength, int ntips, int first, hashtable* hash, int* taxonToReduction);
+extern void rec_freeBitVector(tree *tr, unsigned int **bitVectors);
 
 #ifdef _WAYNE_MPI
 

@@ -2118,7 +2118,7 @@ void freeMultifurcations(tree *tr)
   rax_free(tr->nodep);
 }
 
-static void relabelInnerNodes(nodeptr p, tree *tr, int *number, int *nodeCounter)
+void relabelInnerNodes(nodeptr p, tree *tr, int *number, int *nodeCounter)
 {
   if(isTip(p->number, tr->mxtips))
     {
