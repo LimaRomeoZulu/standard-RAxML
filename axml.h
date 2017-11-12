@@ -531,7 +531,11 @@ typedef  struct noderec
   int              support;
   int              number;
   char             x;
+<<<<<<< HEAD
   float            rec_distrs
+=======
+  boolean	   isLeaf;
+>>>>>>> b4c8789771b79dad2c890f36d9a17684f81af9ee
 }
   node, *nodeptr;
 
@@ -1511,6 +1515,25 @@ extern void *rax_malloc( size_t size );
 extern void *rax_realloc(void *p, size_t size, boolean needsMemoryAlignment);
 extern void rax_free(void *p);
 extern void *rax_calloc(size_t n, size_t size);
+extern void getinput(analdef *adef, rawdata *rdta, cruncheddata *cdta, tree *tr);
+extern void checkOutgroups(tree *tr, analdef *adef);
+extern unsigned int KISS32(void);
+extern int treeGetCh (FILE *fp);
+extern boolean  treeGetLabel (FILE *fp, char *lblPtr, int maxlen, boolean taxonLabel);
+extern int treeFlushLen (FILE  *fp, tree *tr);
+extern boolean treeNeedCh (FILE *fp, int c1, char *where);
+extern boolean treeProcessLength (FILE *fp, double *dptr, int *branchLabel, boolean storeBranchLabels, tree *tr);
+extern boolean  treeFlushLabel (FILE *fp);
+extern stringHashtable *initStringHashTable(hashNumberType n);
+extern void preOrderTraversal(nodeptr p, int numsp, int start, int* array, int* backarray, int* pos);
+extern void unrootedEulerTour(nodeptr p, int numsp, int* array, int* reference, int* pos, int* taxonToEulerIndex);
+extern void relabelInnerNodes(nodeptr p, tree *tr, int *number, int *nodeCounter);
+extern void rec_extractTaxa(int* smallTreeTaxa, int* taxonToReduction, nodeptr p, int numsp, int* pos, int* pos2);
+extern void rec_preOrderTraversalMulti(nodeptr p, int numsp, int start, int* backarray, int* deg, int* pos);
+extern unsigned int **rec_initBitVector(tree *tr, unsigned int vectorLength);
+extern void rec_extractBipartitionsMulti(unsigned int** bitvectors, int* seq, int arraysize, int numsp, unsigned int vLength, int ntips, int first, hashtable* hash, int* taxonToReduction, int* taxonHasDegree, int maxSplits);
+extern int rec_findBipartitions(unsigned int ** bitvectors, int* seq, int arraysize, int* translate, int numsp, unsigned int vLength, int ntips, int first, hashtable* hash, int* taxonToReduction);
+extern void rec_freeBitVector(tree *tr, unsigned int **bitVectors);
 
 #ifdef _WAYNE_MPI
 
