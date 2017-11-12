@@ -531,7 +531,7 @@ typedef  struct noderec
   int              support;
   int              number;
   char             x;
-  float            rec_distrs
+  float            rec_distr;
 }
   node, *nodeptr;
 
@@ -1482,8 +1482,6 @@ extern int getIncrement(tree *tr, int model);
 
 extern void fastSearch(tree *tr, analdef *adef, rawdata *rdta, cruncheddata *cdta);
 extern void shSupports(tree *tr, analdef *adef, rawdata *rdta, cruncheddata *cdta);
-
-extern FILE *getNumberOfTrees(tree *tr, char *fileName, analdef *adef);
 
 extern void writeBinaryModel(tree *tr, analdef *adef);
 extern void readBinaryModel(tree *tr, analdef *adef);
