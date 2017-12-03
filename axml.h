@@ -820,6 +820,7 @@ typedef  struct  {
   int 				numberOfTrees; 
   int 				*geneLeafDistributions;
   float 			*geneRFDistances;
+  unsigned long 		*taxaOccurencePrefixSum;	
 
   stringHashtable  *nameHash;
 

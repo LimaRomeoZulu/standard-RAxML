@@ -2,6 +2,7 @@
 #define _rmq_h_
 
 #include <math.h>
+#include <stdbool.h>
 
 #define false 0
 #define true 1
@@ -10,9 +11,9 @@ typedef int DT;                 // use long for 64bit-version (but take care of 
 typedef unsigned int DTidx;     // for indexing in arrays
 typedef unsigned char DTsucc;
 typedef unsigned short DTsucc2;
-typedef int bool;
-DTidx query(DTidx, DTidx);
-void RMQ_succinct(DT* a, DTidx n);
-void RMQ_succinct_destroy(void);
+//typedef int bool;
+extern DTidx query(DTidx, DTidx);
+extern void RMQ_succinct(DT* a, DTidx n);
+extern void RMQ_succinct_destroy(void);
 
 #endif
