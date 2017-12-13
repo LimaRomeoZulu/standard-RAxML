@@ -392,7 +392,7 @@ static void checkOM(nodeptr p, int *n, int *c, tree *tr)
     }
 }
     
-static char *rootedTreeREC(char *treestr, tree *tr, nodeptr p, boolean printBranchLengths, boolean printNames, 
+char *rootedTreeREC(char *treestr, tree *tr, nodeptr p, boolean printBranchLengths, boolean printNames, 
 			   boolean printLikelihood, boolean rellTree, 
 			   boolean finalPrint, analdef *adef, int perGene, boolean branchLabelSupport, boolean printSHSupport)
 {
@@ -456,7 +456,7 @@ static char *rootedTreeREC(char *treestr, tree *tr, nodeptr p, boolean printBran
   return  treestr;
 }
 
-static char *rootedTree(char *treestr, tree *tr, nodeptr p, boolean printBranchLengths, boolean printNames, 
+char *rootedTree(char *treestr, tree *tr, nodeptr p, boolean printBranchLengths, boolean printNames, 
 			boolean printLikelihood, boolean rellTree, 
 			boolean finalPrint, analdef *adef, int perGene, boolean branchLabelSupport, boolean printSHSupport)
 {
