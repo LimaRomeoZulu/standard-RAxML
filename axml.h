@@ -532,6 +532,7 @@ typedef  struct noderec
   int              number;
   char             x;
   float            rec_distr;
+  boolean		   inTree;
 }
   node, *nodeptr;
 
