@@ -83,7 +83,7 @@ char run_id[128] = "",
 
 
 
-char *protModels[NUM_PROT_MODELS] = {"DAYHOFF", "DCMUT", "JTT", "MTREV", "WAG", "RTREV", "CPREV", "VT", 
+const char *protModels[NUM_PROT_MODELS] = {"DAYHOFF", "DCMUT", "JTT", "MTREV", "WAG", "RTREV", "CPREV", "VT", 
 				     "BLOSUM62", "MTMAM", "LG", "MTART", "MTZOA", "PMB", "HIVB", "HIVW", 
 				     "JTTDCMUT", "FLU",  "STMTREV", "DUMMY", "DUMMY2", "AUTO", "LG4M", "LG4X", "PROT_FILE", "GTR_UNLINKED", "GTR"};
 
