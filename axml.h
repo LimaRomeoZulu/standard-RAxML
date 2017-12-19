@@ -532,7 +532,6 @@ typedef  struct noderec
   int              number;
   char             x;
   float            rec_distr;
-  boolean		   inTree;
 }
   node, *nodeptr;
 
@@ -1530,7 +1529,6 @@ extern unsigned int **rec_initBitVector(tree *tr, unsigned int vectorLength);
 extern void rec_extractBipartitionsMulti(unsigned int** bitvectors, int* seq, int arraysize, int numsp, unsigned int vLength, int ntips, int first, hashtable* hash, int* taxonToReduction, int* taxonHasDegree, int maxSplits);
 extern int rec_findBipartitions(unsigned int ** bitvectors, int* seq, int arraysize, int* translate, int numsp, unsigned int vLength, int ntips, int first, hashtable* hash, int* taxonToReduction);
 extern void rec_freeBitVector(tree *tr, unsigned int **bitVectors);
-extern char *rootedTreeREC(char *treestr, tree *tr, nodeptr p, boolean printBranchLengths, boolean printNames, boolean printLikelihood, boolean rellTree, boolean finalPrint, analdef *adef, int perGene, boolean branchLabelSupport, boolean printSHSupport);
 
 #ifdef _WAYNE_MPI
 
